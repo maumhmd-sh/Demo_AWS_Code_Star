@@ -1,72 +1,61 @@
-Welcome to the AWS CodeStar sample static HTML website
-==================================================
+# Demo_AWS_Code_Star
 
-This sample code helps get you started with a simple static HTML website
-deployed by AWS CodeDeploy and AWS CloudFormation to an Amazon EC2 instance.
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
 
-What's Here
------------
+---
 
-This sample includes:
+## 📄 Project Description
 
-* README.md - this file
-* appspec.yml - this file is used by AWS CodeDeploy when deploying the website
-  to EC2
-* scripts/ - this directory contains scripts used by AWS CodeDeploy when
-  installing and deploying your website on the Amazon EC2 instance
-* webpage/ - this directory contains static web assets used by your website
-  * index.html - this file contains the sample website
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
-* template-configuration.json - this file contains the project ARN with placeholders used for tagging resources with the project ID
+**Demo_AWS_Code_Star** is a sample project demonstrating the deployment of a static HTML website using **AWS CodeDeploy** and **AWS CloudFormation** to an Amazon EC2 instance. This project includes configuration files and scripts to automate the deployment process.
 
-Getting Started
----------------
+---
 
-These directions assume you want to develop on your local computer, and not
-from the Amazon EC2 instance itself.
+## 📁 Repository Structure
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the
-AWS CodeStar user guide.
+Demo_AWS_Code_Star/
+├── scripts/ # Deployment scripts
+├── webpage/ # Static web assets
+├── appspec.yml # AWS CodeDeploy configuration
+├── buildspec.yml # AWS CodeBuild configuration
+├── template.yml # AWS CloudFormation template
+└── README.md # Project documentation
 
-1. Open `index.html` from your cloned repository in a web browser to view your website.
-   You can also view your website on the AWS CodeStar project dashboard under Application
-   endpoints.
 
-What Do I Do Next?
-------------------
+---
 
-You can start making changes to the sample static HTML website. We suggest making a
-small change to /webpage/index.html first, so you can see how changes pushed to your
-project's repository are automatically picked up by your project pipeline and deployed
-to the Amazon EC2 instance. (You can watch the progress on your project dashboard.)
-Once you've seen how that works, start developing your own code, and have fun!
+## ⚙️ How to Use
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+### 1. Clone the Repository
 
-User Guide: https://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+```bash
+git clone https://github.com/maumhmd-sh/Demo_AWS_Code_Star.git
+cd Demo_AWS_Code_Star
+```
 
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+### 2. Deploy Using AWS CloudFormation
+- Open the AWS CloudFormation console.
+- Create a new stack using the template.yml file.
+- Follow the prompts to configure and deploy the stack.
 
-How Do I Add Template Resources to My Project?
-------------------
+### 3. Configure AWS CodeDeploy
+- Ensure the `ppspec.yml` file is correctly configured for your application.
+- Set up AWS CodeDeploy to deploy the website to your EC2 instance.
 
-To add AWS resources to your project, you'll need to edit the `template.yml`
-file in your project's repository. You may also need to modify permissions for
-your project's worker roles. After you push the template change, AWS CodeStar
-and AWS CloudFormation provision the resources for you.
+### 4. Access the Website
+- After deployment is complete, access the website via the public IP or domain name of your EC2 instance.
+- You should see the deployed static website.
 
-See the AWS CodeStar user guide for instructions to modify your template:
-https://docs.aws.amazon.com/codestar/latest/userguide/how-to-change-project.html#customize-project-template
+---
 
-What Should I Do Before Running My Project in Production?
-------------------
+## 📌 Features
+- Automates deployment of a static website using AWS CodeDeploy.
+- Infrastructure as code with AWS CloudFormation.
+- Sample deployment scripts for smoother workflow.
+- Easy to replicate for testing or demo purposes.
 
-AWS recommends you review the security best practices recommended by the framework
-author of your selected sample application before running it in production. You
-should also regularly review and apply any available patches or associated security
-advisories for dependencies used within your application.
+---
+## 📝 License
+This project is licensed under the MIT License.
 
-Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+## ❤️ Support
+If you find this project helpful, give it a ⭐ on GitHub and share it with others!
